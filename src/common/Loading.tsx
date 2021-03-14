@@ -1,5 +1,13 @@
 import style from "./Loading.module.css";
 
-export default function Loading() {
-  return <div className={style.wrapper}></div>;
+interface LoadingProps {
+  init?: boolean;
+}
+
+export default function Loading({ init }: LoadingProps) {
+  return (
+    <div className={init ? style.initWrapper : style.wrapper}>
+      {init && "Initialize..."}
+    </div>
+  );
 }

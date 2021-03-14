@@ -1,3 +1,4 @@
+.initWrapper,
 .wrapper {
   display: grid;
   place-content: center;
