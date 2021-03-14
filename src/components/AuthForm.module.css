@@ -1,0 +1,70 @@
+.heading {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  --border: 0.2rem solid #dcdcdc;
+
+  display: grid;
+  grid-template-columns: minmax(auto, 30rem);
+  gap: 1.6rem;
+  padding: 3rem;
+  border: var(--border);
+  background-color: white;
+}
+
+.fieldset {
+  display: grid;
+  gap: 1rem;
+  border: none;
+}
+
+.input {
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  border: var(--border);
+}
+
+.error {
+  text-align: center;
+  color: red;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.buttons {
+  display: grid;
+  gap: 1rem;
+}
+
+.button {
+  --perspective: 40rem;
+
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+  transform: perspective(var(--perspective));
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: perspective(var(--perspective)) translateZ(1rem);
+}
+
+.button[type="submit"] {
+  color: white;
+  background-color: #0095f6;
+}
+
+.button[type="button"] {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  gap: 1rem;
+}
+
+.or {
+  text-align: center;
+}
