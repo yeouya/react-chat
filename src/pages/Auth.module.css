@@ -1,0 +1,10 @@
+.wrapper {
+  display: grid;
+  place-content: center;
+  padding: 1.6rem;
+}
+
+.container {
+  display: grid;
+  gap: 1.6rem;
+}

@@ -1,0 +1,44 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(auto, 45rem);
+  grid-template-rows: 60rem;
+  place-content: center;
+  padding: 1.6rem;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+.main {
+  background: var(--chat-background);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.main::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.mainInner {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  gap: 1rem 0;
+  padding: 1.2rem;
+}
+
+.error {
+  text-align: center;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #ebebeb;
+  background: #e57373;
+}
