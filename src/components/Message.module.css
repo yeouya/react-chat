@@ -1,0 +1,54 @@
+.wrapper {
+  grid-column: 1/3;
+  justify-self: start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4rem 0.6rem;
+}
+
+.wrapper.self {
+  grid-column: 2/4;
+  justify-self: end;
+  gap: 0;
+}
+
+.img,
+.icon {
+  grid-row: 1/3;
+}
+
+.img {
+  --diameter: 3.2rem;
+
+  width: var(--diameter);
+  height: var(--diameter);
+  border-radius: 50%;
+}
+
+.icon {
+  color: #62B2D9;
+  font-size: 3.2rem;
+}
+
+.article {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: end;
+  gap: 0.6rem;
+}
+
+.text {
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.8rem;
+  background: white;
+  word-break: break-all;
+}
+
+.text.self {
+  grid-column: 2/3;
+  background: #ffed00;
+}
+
+.timestamp {
+  font-size: 1.2rem;
+}
