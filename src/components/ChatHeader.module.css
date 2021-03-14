@@ -1,0 +1,12 @@
+.header {
+  display: grid;
+  justify-content: end;
+  padding: 1rem;
+  background: var(--chat-background);
+}
+
+.button {
+  display: grid;
+  align-items: center;
+  font-size: 2.4rem;
+}
