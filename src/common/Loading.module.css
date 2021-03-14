@@ -1,0 +1,26 @@
+.wrapper {
+  display: grid;
+  place-content: center;
+}
+
+.wrapper::before {
+  --diameter: 3rem;
+
+  content: "";
+  width: var(--diameter);
+  height: var(--diameter);
+  border: 0.4rem solid dodgerblue;
+  border-radius: 50%;
+  border-left-color: transparent;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
