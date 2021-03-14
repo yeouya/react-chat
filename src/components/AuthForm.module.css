@@ -5,8 +5,6 @@
 }
 
 .form {
-  --border: 0.2rem solid #dcdcdc;
-
   display: grid;
   grid-template-columns: minmax(auto, 30rem);
   gap: 1.6rem;
@@ -40,17 +38,17 @@
 }
 
 .button {
-  --perspective: 40rem;
+  --perspective: perspective(40rem);
 
   padding: 0.8rem;
   border-radius: 0.4rem;
   box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
-  transform: perspective(var(--perspective));
+  transform: var(--perspective);
   transition: 0.2s;
 }
 
 .button:hover {
-  transform: perspective(var(--perspective)) translateZ(1rem);
+  transform: var(--perspective) translateZ(1rem);
 }
 
 .button[type="submit"] {
