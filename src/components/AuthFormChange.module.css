@@ -1,0 +1,18 @@
+.paragraph {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.6rem;
+  border: var(--border);
+  background-color: white;
+}
+
+.button {
+  color: #0095F6;
+  font-weight: bold;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
