@@ -31,7 +31,7 @@ export default function AuthForm({
             type="text"
             title="닉네임 (영문 대소문자, 한글 사용 가능)"
             placeholder="닉네임"
-            pattern="^[a-zA-z가-힣]+$"
+            pattern="^[a-zA-Z가-힣]+$"
             maxLength={8}
             required
             {...bindNickname}
