@@ -11,6 +11,7 @@ export default function Home() {
   const [messages, setMessages] = useState<any[]>([]);
   const chatRef = useRef<HTMLElement>(null);
   const { user } = useAuthContext();
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Home() {
       .onSnapshot({
         next({ docs }) {
           setMessages(docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+          setLoading(false);
         },
         error(error) {
           console.error(error);
@@ -48,7 +50,7 @@ export default function Home() {
     };
   }, [error]);
 
-  return messages.length ? (
+  return loading ? (
     <Loading />
   ) : (
     <div className={style.wrapper}>
