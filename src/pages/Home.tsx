@@ -48,7 +48,7 @@ export default function Home() {
     };
   }, [error]);
 
-  return !messages.length ? (
+  return messages.length ? (
     <Loading />
   ) : (
     <div className={style.wrapper}>
